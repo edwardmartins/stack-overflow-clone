@@ -1,0 +1,45 @@
+<%- include('header_logged', {style: '/css/questions.css' }) %>
+    <main class="main-content">
+        <p class="search-query">
+            <%=query%>
+        </p>
+        <div class="result-makequestion">
+            <p class="question-result">
+                <%=totalQuestions%> Preguntas
+            </p>
+            <a class="make-question" href="/questions/create">Formular una pregunta</a>
+        </div>
+        <div class="questions-box">
+            <% questionList.forEach(question => { %>
+                <div class="question">
+                    <div class="question-inf">
+                        <a href="/questions/question/<%=question.id%>" class="tittle">
+                            <%= question.tittle %>
+                        </a>
+                        <div class="body">
+                            <%= question.body %>
+                        </div>
+                        <div class="tags">
+                            <% question.tag_names.forEach((tagName)=> { %>
+                                <a class="tag" href="/questions/tags/<%=tagName%>">
+                                    <%=tagName%>
+                                </a>
+                                <% }); %>
+                        </div>
+                    </div>
+                    <div class="user-details">
+                        <div class="question-date">Formulada el
+                            <%= question.creation_date %>
+                        </div>
+                        <img class="image" src="/user/image/<%=question.user_id%>">
+                        <a class="nick" href="/user/profile/<%=question.user_id%>">
+                            <%=question.user_name%>
+                        </a>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </main>
+</body>
+
+</html>

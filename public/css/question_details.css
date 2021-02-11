@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.80vmin;
+}
+
+html, body {
+    height: 100%;
+}
+
+.header {
+    height: 30%;
+    background-image: linear-gradient(to bottom, rgb(128, 174, 206), rgb(248, 249, 250));
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+.main-content {
+    min-height: 70%;
+    background-image: linear-gradient(to bottom, rgb(248, 249, 250), rgb(219, 220, 221));
+}
+
+.main-header {
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1%;
+}
+
+.option {
+    width: 50%;
+    padding: 1%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #406c8e;
+    color: white;
+}
+
+.logo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+
+.logo-image {
+    width: 50%;
+    border-radius: 0%;
+}
+
+.logo-letters {
+    width: 15%;
+    font-size: 10vmin;
+    color: #f48024;
+    text-shadow: 4px 4px #bcbbbb;
+    text-align: center;
+    opacity: .9;
+}
+
+.user-inf {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-photo {
+    height: 40%;
+    width: 20%;
+    margin-top: 5%;
+}
+
+.user-name {
+    font-size: 2vmin;
+}
+
+.log-out {
+    padding: 1%;
+    width: 40%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #406c8e;
+    color: white;
+}
+
+.search-bar {
+    height: 30%;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button {
+    height: 40%;
+    margin-right: 1%;
+    width: 10%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #406c8e;
+    color: white;
+    font-size: 1.75vmin;
+}
+
+.search-input {
+    height: 40%;
+    width: 90%;
+    text-indent: 5px;
+}
+
+.question-details {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle {
+    padding-top: 4%;
+    padding-bottom: 2%;
+    font-size: 2.75vmin;
+}
+
+.question .visits {
+    background-image: linear-gradient(to right, #F0E68C, #f5f1d2);
+    margin: 0.5% 0;
+    padding: 0.25% 1%;
+    font-size: 1.75vmin;
+}
+
+.votes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(128, 174, 206), rgb(248, 249, 250));
+    margin: 0.5% 0;
+    padding: 0.25% 1%;
+}
+
+.votes .number {
+    font-size: 2vmin;
+}
+
+.votes .arrow {
+    margin-left: 1%;
+    height: 18px;
+    width: 18px;
+}
+
+.body {
+    margin-right: 1%;
+    padding: 1% 0;
+    padding-bottom: 2%;
+    font-size: 1.8vmin;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.question .tags {
+    display: flex;
+    flex-direction: row;
+}
+
+.question .tags .tag {
+    border-radius: 5px;
+    margin-right: 1%;
+    padding: 0.75% 1%;
+    color: rgb(209, 138, 6);
+    background-color: rgb(252, 232, 196);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    margin-left: 80%;
+}
+
+.user-details .image {
+    height: 60%;
+    width: 30%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.user-details .date {
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+    font-size: 1.5vmin;
+}
+
+.total-answers {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    font-size: 2.75vmin;
+}
+
+.answers {
+    margin-left: 4%;
+}
+
+.answer {
+    margin-bottom: 2%;
+}
+
+.answer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    margin: 3% auto;
+    padding: 0.5% 3%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #406c8e;
+    color: white;
+}
+
+textarea {
+    padding: 1%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+}

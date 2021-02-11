@@ -1,0 +1,31 @@
+<%- include('header_logged', {style: '/css/profile.css' }) %>
+    <main class="main-content">
+        <div class="profile">
+            <div class="flex-row">
+                <div class="user-details">
+                    <img class="photo" src="/user/image/<%=user.id%>">
+                    <div class="name"><%=user.user_name%></div>
+                    <div class="register-date">Miembro desde <%=user.user_created_at%></div>
+                </div>
+                <div class="statistics">
+                    <div class="tittle">ESTADISTICAS</div>
+                    <div class="reputation">
+                        <p>Reputacion</p>
+                        <div class="total"><%=user.reputation%></div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="questions">
+                            <p>Preguntas</p>
+                            <div class="total"><%=questions%></div>
+                        </div>
+                        <div class="answers">
+                            <p>Respuestas</p>
+                            <div class="total"><%=answers%></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+
+</html>

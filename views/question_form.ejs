@@ -1,0 +1,39 @@
+<%- include('header_logged', {style: '/css/question_form.css' }) %>
+    <main class="main-content">
+        <p class="tittle">Formular una pregunta</p>
+
+        <div class="question-form">
+            <form action="/questions/create" method="POST">
+                <!--Titulo-->
+                <label class="headers" for="tittle">Titulo</label>
+                <p class="instructions">Se especifico e imagina que estas haciendo la pregunta a otra persona</p>
+                <input type="text" placeholder="¿Cual es tu pregunta sobre programacion de aplicaciones web?"
+                    name="tittle" required>
+                <!--Cuerpo-->
+                <label class="headers" for="body">Cuerpo</label>
+                <p class="instructions">Incluye toda la informacion que alguien necesitaría para responder tu pregunta
+                </p>
+                <textarea name="body" rows="10" required></textarea>
+                <!--Etiquetas-->
+                <label class="headers" for="tags">Etiquetas</label>
+                <p class="instructions">Añade hasta 5 etiquetas para describir sobre que trata tu pregunta</p>
+                <input id="tagw" type="text" placeholder="Por ejemplo: @node@express" name="tags" pattern='@\w+\S+'>
+
+                <div id="tags" class="etiquetas">
+                    <% tags.forEach(tag => { %>
+                    <div id="tag" class="etiqueta">
+                        <%=tag%>
+                    </div>
+                    <% }) %>
+                </div>
+
+                <!--Boton de publicacion-->
+                <button class="button" type="submit">Publica tu pregunta</button>
+            </form>
+        </div>
+
+
+    </main>
+</body>
+
+</html>

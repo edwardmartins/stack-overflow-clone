@@ -1,0 +1,83 @@
+<%- include('header_logged', {style: '/css/question_details.css' }) %>
+    <main class="main-content">
+
+        <div class="question-details">
+
+            <div class="question">
+                <div class="tittle">
+                    <%=question.tittle%>
+                </div>
+                <div class="visits">Vista <%=visits%> veces</div>
+                <div class="votes">
+                    <div class="number"><%=question.votes%> votos</div>
+                    <a class="arrow" href="/questions/uparrowq/<%=question.id%>"><img src="/images/up.ico" alt=""></a>
+                    <a class="arrow" href="/questions/downarrowq/<%=question.id%>"><img src="/images/down.ico" alt=""></a>
+                </div>
+                <div class="body">
+                    <%=question.body%>
+                </div>
+                <div class="tags">
+                    <% question.tag_names.forEach((tagName)=> { %>
+                        <a class="tag" href="/questions/tags/<%=tagName%>">
+                            <%=tagName%>
+                        </a>
+                        <% }); %>
+                </div>
+                <div class="user-details">
+                    <div class="date">Formulada el
+                        <%= question.creation_date %>
+                    </div>
+                    <img class="image" src="/user/image/<%=question.user_id%>">
+                    <a  class="nick" href="/user/profile/<%=question.user_id%>">
+                        <%=question.user_name%>
+                    </a>
+                </div>
+            </div>
+
+            <div class="total-answers">
+                <%=answers.length%> Respuestas
+            </div>
+
+            <div class="answers">
+                <% answers.forEach(answer=> { %>
+                    <div class="answer">
+                        <div class="votes">
+                            <div class="number"><%=answer.votes%> votos</div>
+                            <a class="arrow" href="/questions/uparrowa/<%=answer.id%>"><img src="/images/up.ico"></a>
+                            <a class="arrow" href="/questions/downarrowa/<%=answer.id%>"><img src="/images/down.ico"></a>
+                        </div>
+                        <div class="body">
+                            <%=answer.body%>
+                        </div>
+                        <div class="user-details">
+                            <div class="date">Respondida el <%=answer.creationDate%>
+                            </div>
+                            <img class="image" src="/user/image/<%=answer.userId%>">
+                            <a class="nick" href="/user/profile/<%=answer.userId%>">
+                                <%=answer.userName%>
+                            </a>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
+
+            <form class="answer-form" action="/questions/insertAnswer" method="POST">
+
+                <label class="tittle" for="answerBody">Tu respuesta</label>
+                <textarea name="answerBody" rows="10" required></textarea>
+                <!--cuerpo de la respuesta-->
+                <input type="hidden" name="questionId" value="<%=question.id%>">
+                <!--id de la pregunta-->
+                <input type="hidden" name="userId" value="<%=userId%>">
+                <!--id del usuario que esta actualmente identificado-->
+
+                <button class="button" type="submit">Publica tu respuesta</button>
+            </form>
+        </div>
+
+
+    </main>
+    </body>
+
+    </html>

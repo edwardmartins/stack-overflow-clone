@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.80vmin;
+}
+
+html, body {
+    height: 100%;
+}
+
+.header {
+    height: 20%;
+    background-image: linear-gradient(to bottom, rgb(128, 174, 206), rgb(248, 249, 250))
+}
+
+.main-content {
+    height: 80%;
+    background-image: linear-gradient(to bottom, rgb(248, 249, 250), rgb(219, 220, 221))
+}
+
+.logo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+
+.logo-image {
+    width: 50%;
+    border-radius: 0%;
+}
+
+.logo-letters {
+    width: 15%;
+    font-size: 10vmin;
+    color: #f48024;
+    text-shadow: 4px 4px #bcbbbb;
+    text-align: center;
+    opacity: .9;
+}
+
+.register-box {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 25%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+input {
+    height: 5%;
+    margin: 3% 1%;
+    border-radius: 3px;
+    border: 1px solid black;
+    text-indent: 5px;
+}
+
+input[type="file"] {
+    font-size: 1.50vmin;
+    height: 7%;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    height: 75%;
+    width: 30%;
+    margin-top: 1%;
+}
+
+.button {
+    width: 30%;
+    padding: 1%;
+    margin: 3% auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #406c8e;
+    color: white;
+}
+
+.error-msg {
+    margin: 1% auto;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 2vmin;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

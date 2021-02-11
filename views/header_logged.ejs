@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%=style%>">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/tags.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="main-header">
+            <div class="menu">
+                <a class="option" href="/questions">Preguntas</a>
+                <a class="option" href="/questions/noanswer">Sin responder</a>
+                <a class="option" href="#">Usuarios</a>
+            </div>
+            <div class="logo">
+                <img class="logo-image" src="/images/logo-stackoverflow.png" alt="">
+            </div>
+            <div class="user-inf">
+                <img class="profile-photo" src="/user/image/<%=userId%>" alt="">
+                <a class="user-name" href="/user/profile/<%=userId%>"><%=userName%></a>
+                <a class=log-out style="background-color: brown;" href="/user/messages/<%=userId%>">Mensajes</a>
+                <a class="log-out" href="/auth/logout">Cerrar Sesion</a>
+            </div>
+        </div>
+        <form class="search-bar" action='/questions/search' method="GET">
+            <button class="search-button" type="submit">Buscar</button>
+            <input class="search-input" type="text" placeholder="Buscar por titulo/cuerpo de pregunta" name="searchInput">
+        </form>
+    </header>

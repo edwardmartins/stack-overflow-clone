@@ -1,0 +1,22 @@
+<%- include('header_logged', {style: '/css/mensajes.css' }) %>
+    <main class="main-content">
+        <div class="mensajes-box">
+            <h1>Mensajes recibidos</h1>
+            <% mensajes.forEach(mensaje => { %>
+            <div class="mensaje">
+                <img class="foto-usuario" src="/user/image/<%=mensaje.emisor%>">
+                <div class="nombre-usuario"></div>
+                <div class="mensaje"><%=mensaje.texto%></div>
+                <div class="fecha"><%=mensaje.fecha%></div>
+                <div class="hora"><%=mensaje.hora%></div>
+                <a class="borrar" href="/user/deleteMessage/<%=mensaje.id%>">Borrar</a>
+            </div>
+            <% }) %>
+        
+            <a class="enviar" href="">Enviar mensaje</a>
+
+        </div>
+
+    </main>
+</body>
+</html>
